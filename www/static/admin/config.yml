@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: narative/gatsby-theme-novela
+  branch: @feature/netlify-data-source
 
 media_folder: static/assets
 public_folder: assets
