@@ -1,0 +1,44 @@
+backend:
+  name: test-repo
+
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: author
+    label: Author
+    folder: authors
+    identifier_field: name
+    create: true
+    fields:
+      - { name: name, label: Full name }
+      - { name: bio, label: Bio }
+      - { name: avatar, label: Avatar, widget: image }
+      - { name: featured, label: Featured, widget: boolean, default: true }
+      - name: social
+        label: Social
+        required: false
+        widget: list
+        fields:
+          - { name: name, label: "Name", widget: string }
+          - { name: url, label: "URL", widget: string }
+
+  - name: post
+    label: Post
+    folder: posts
+    create: true
+    identifier_field: title
+    fields:
+      - { name: title, label: Title }
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "author"
+        searchFields: ["name"]
+        valueField: "name"
+        displayFields: ["name"]
+      - { name: date, label: Date, widget: date }
+      - { name: slug, label: slug, required: false }
+      - { name: hero, label: "Hero", widget: image }
+      - { name: excerpt, label: Excerpt }
+      - { name: body, label: Body, widget: markdown }
