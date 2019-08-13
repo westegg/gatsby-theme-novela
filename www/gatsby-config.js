@@ -46,6 +46,14 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/netlify`,
+        name: "netlify",
+      },
+    },
+    `gatsby-plugin-netlify-cms`,
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Novela by Narative`,

@@ -31,14 +31,6 @@ module.exports = ({
         },
       },
       {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          path: `${__dirname}/netlify`,
-          name: "netlify",
-        },
-      },
-      `gatsby-plugin-netlify-cms`,
-      {
         resolve: `gatsby-plugin-mdx`,
         options: {
           extensions: [`.mdx`, `.md`],
