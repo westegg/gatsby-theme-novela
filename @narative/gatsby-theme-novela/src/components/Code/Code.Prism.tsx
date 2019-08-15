@@ -26,9 +26,13 @@ function calculateLinesToHighlight(meta) {
   }
 }
 
-function CodePrism({ codeString, language, metastring }) {
-  const shouldHighlightLine = calculateLinesToHighlight(metastring);
+// function CodePrism({ codeString, language, metastring }) {
+//   const shouldHighlightLine = calculateLinesToHighlight(metastring);
 
+function CodePrism(props) {
+  // const shouldHighlightLine = calculateLinesToHighlight(metastring);
+  console.log(props);
+  return <pre {...props} />;
   return (
     <Highlight {...defaultProps} code={codeString} language={language}>
       {({ className, tokens, getLineProps, getTokenProps }) => {

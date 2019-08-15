@@ -33,8 +33,8 @@ const components = {
   ul: Lists.ul,
   ol: Lists.ol,
   p: Paragraph,
-  code: Code.Prism,
-  pre: Code.Pre,
+  code: Code.VSCode,
+  pre: Code.VSCode,
 };
 
 function MDX({ content, children, ...props }) {

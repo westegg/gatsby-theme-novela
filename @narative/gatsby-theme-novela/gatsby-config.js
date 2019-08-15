@@ -1,4 +1,7 @@
-module.exports = ({ contentAuthors = "content/authors", contentPosts = "content/posts" }) => ({
+module.exports = ({
+  contentAuthors = "content/authors",
+  contentPosts = "content/posts",
+}) => ({
   mapping: {
     "Mdx.frontmatter.author": `AuthorsYaml`,
   },
@@ -38,6 +41,10 @@ module.exports = ({ contentAuthors = "content/authors", contentPosts = "content/
               withWebp: true,
             },
           },
+          {
+            resolve: `gatsby-remark-vscode`,
+          },
+
           { resolve: `gatsby-remark-copy-linked-files` },
           { resolve: `gatsby-remark-numbered-footnotes` },
           { resolve: `gatsby-remark-smartypants` },
